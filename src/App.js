@@ -1,22 +1,25 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.scss';
 import addNewSentenceForm from './components/addNewSentenceForm';
+import sentenceList from './components/sentenceList';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <Switch>
+  
           <div className="App">
             <Route exact path='/' component={addNewSentenceForm} />
+            <Route path='/sentences' component={sentenceList}  />
           </div>
-        </Switch>
+
       </Router>
     );
   }
 }
+
+
 
 export default App;
 
